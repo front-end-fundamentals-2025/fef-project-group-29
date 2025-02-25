@@ -100,6 +100,14 @@ header{
   padding: 0 20px;
 }
 
+.secondary-image img,
+.two-images img,
+.product-item img,
+.image-item img {
+  width: 100%;
+  
+}
+
 .image-item {
   position: relative;
 }
@@ -140,6 +148,11 @@ header{
 a{
   text-decoration: none;
   color: black;
+}
+
+.home-button{
+  text-align: center;
+  
 }
 
 
