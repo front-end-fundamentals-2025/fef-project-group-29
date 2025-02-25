@@ -32,6 +32,25 @@ header{
   display: flex;
 }
 
+.icon-cart{
+  position: relative;
+}
+
+.icon-cart span{
+  position: absolute;
+  background-color: black;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  border-radius: 100%;
+  color: white;
+  top: 50%;
+  right: -5px;
+  font-size: 15px;
+  align-items: center;
+}
+
 .icon-link{
   margin-left: 15px;
   text-decoration: none;
@@ -43,9 +62,7 @@ header{
   border-radius: 100%;
 }
 
-.header-icons img:hover{
-  box-shadow: 0 4px 10px black;
-}
+
 
 .header-bottom-line {
   background-color: #D6E4F0;
