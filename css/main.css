@@ -182,6 +182,81 @@ a{
 }
 
 
+/*Contact form*/
+
+.contact-structure{
+display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 0.10fr 1fr 0.10fr;
+  gap: 20px; 
+  padding: 20px;
+  text-decoration: none;
+}
+
+/* Image on the left column */
+
+img {
+  grid-column: 1 / 2; 
+  grid-row: 2;
+  max-width: 90%;
+
+}
+
+/* Form wrapper */
+.wrapper {
+  margin: 20px;
+  grid-column: 2 / 3; 
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style of the form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+}
+
+
+.form-group input, textarea {
+  padding: 10px;
+  border: 1px solid #ccccccd7;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/*text area only*/
+
+textarea {
+  resize: none; /*defined px for the text area*/
+  height: 100px;
+}
+
+/* BUTTON */
+
+.submit-button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #107cbf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /*change the mouse style to a hand for click*/
+}
+
+.submit-button:hover {
+  background-color: #359cdd;
+}
+
+
 
 /* Footer */
 
