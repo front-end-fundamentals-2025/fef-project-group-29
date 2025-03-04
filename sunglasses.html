@@ -46,7 +46,7 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
           </svg>
 
-          <span>0</span>
+          <span id="cart-count">0</span>
           
 
         </div>
@@ -281,17 +281,21 @@
     </div>
     <div class="footer-bottom">
       <p>©2025 LUMILUXE</p>
-      <div class="footer-logo">
-        <img src="path-to-your-logo.png" alt="Logo" />
-      </div>
+      
       <div class="payment-methods">
-        <img src="path-to-payment1.png" alt="Payment 1" />
-        <img src="path-to-payment2.png" alt="Payment 2" />
-        <img src="path-to-payment3.png" alt="Payment 3" />
-        <img src="path-to-payment4.png" alt="Payment 4" />
+        <img src="img/appelpay.jpg" alt="payment 1">
+        <img src="img/mstcard.png" alt="payment 2">
+        <img src="img/swish.png" alt="payment 3">
+        <img src="img/paypal.png" alt="payment 4">
+      
       </div>
     </div>
   </footer>
-  
+  <div id="cart-panel" class="cart-panel">
+    <h3>Shopping Cart</h3>
+    <div id="cart-items"></div>
+    <button class="close-cart" onclick="toggleCart()">Close</button>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
