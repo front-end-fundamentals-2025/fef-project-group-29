@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMILUXE Home Page</title>
   <link rel="stylesheet" href="./css/testt.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -29,7 +30,7 @@
   
           </div>
           
-          <div class="icon-favourites icon-link">
+          <div class="icon-favourites icon-link" >
   
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z"/>
@@ -38,7 +39,7 @@
   
           </div>
   
-          <div class="icon-cart icon-link">
+          <div class="icon-cart icon-link" onclick="toggleCart()">
   
             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
@@ -87,10 +88,15 @@
     <section class="category-section">
       <h2>Eyeglasses</h2>
       <div class="products-grid">
+        
         <div class="product-item">
+          <a href="itemdetail.html" >
           <img src="./img/glasses-1.avif" alt="Eyeglass 1">
+          
+</a>
           <h3>Classic Black</h3>
           <p>1500 SEK</p>
+          
         </div>
         <div class="product-item">
           <img src="./img/glasses-2.avif" alt="Eyeglass 2">
@@ -200,5 +206,11 @@
   
     
   </footer>
+  <div id="cart-panel" class="cart-panel">
+    <h3>Shopping Cart</h3>
+    <div id="cart-items"></div>
+    <button class="close-cart" onclick="toggleCart()">Close</button>
+</div>
+<script src="main.js"></script>
 </body>
 </html>

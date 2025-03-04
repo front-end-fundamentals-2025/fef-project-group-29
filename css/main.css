@@ -492,31 +492,3 @@ footer {
 }
 
 /*test test*/
-/* Category Section Styling */
-.category-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.category-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.home-button button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #107cbf;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.home-button button:hover {
-  background-color: #359cdd;
-}
