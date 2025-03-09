@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     loadCartItems();
     updateCartCount(); // Ensure cart count is updated on load
+    updateOrderTotal(); // Ensure order total is updated on load
 });
 
 // Toggle cart visibility
@@ -23,6 +24,7 @@ function addToCart(product) {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     loadCartItems();
+    updateOrderTotal();
 }
 
 // Function to remove an item from the cart
@@ -33,6 +35,7 @@ function removeFromCart(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     loadCartItems();
+    updateOrderTotal();
 }
 
 // Increase item quantity
@@ -47,6 +50,7 @@ function increaseQuantity(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     loadCartItems();
+    updateOrderTotal();
 }
 
 // Decrease item quantity
@@ -65,6 +69,7 @@ function decreaseQuantity(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
     loadCartItems();
+    updateOrderTotal();
 }
 
 // Function to load and display cart items
@@ -82,15 +87,16 @@ function loadCartItems() {
         cartItem.innerHTML = `
             <img src="${item.image}" alt="${item.name}">
             <div class="cart-details">
-                <p>${item.name}</p>
+                <h4>${item.name}</h4>
                 <p>${item.price} SEK</p>
                 <div class="quantity-controls">
                     <button onclick="decreaseQuantity(${item.id})">−</button>
                     <span>${item.quantity}</span>
                     <button onclick="increaseQuantity(${item.id})">+</button>
                 </div>
+                <p class="item-total">${item.price * item.quantity} SEK</p>
             </div>
-            <button class="remove-btn" onclick="removeFromCart(${item.id})">X</button>
+            <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
         `;
         cartItemsContainer.appendChild(cartItem);
     });
@@ -102,3 +108,28 @@ function updateCartCount() {
     let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     document.getElementById("cart-count").innerText = totalItems;
 }
+
+// Function to calculate and update the order total
+function updateOrderTotal() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let orderTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    let orderTotalElement = document.querySelector(".order-total span:last-child");
+    if (orderTotalElement) {
+        orderTotalElement.innerText = `${orderTotal} SEK`;
+    }
+}
+
+// Proceed to Checkout (Example function)
+function proceedToCheckout() {
+    alert("Proceeding to checkout...");
+    // Add your checkout logic here
+}
+
+// Attach event listener to the checkout button
+document.addEventListener("DOMContentLoaded", function () {
+    let checkoutButton = document.querySelector(".checkout-btn");
+    if (checkoutButton) {
+        checkoutButton.addEventListener("click", proceedToCheckout);
+    }
+});
