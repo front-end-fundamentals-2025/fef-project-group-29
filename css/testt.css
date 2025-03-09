@@ -47,32 +47,32 @@
     margin: 0 auto;
   }
   
-/* Keyframes for the animation */
+ 
 @keyframes storeNameAnimation {
     0% {
       opacity: 0;
-      letter-spacing: -10px; /* Start with tight letter spacing */
-      color: #107cbf; /* Start with a blue color */
+      letter-spacing: -10px; 
+      color: #107cbf; 
     }
     50% {
       opacity: 1;
-      letter-spacing: 5px; /* Increase letter spacing */
-      color: #222; /* Transition to the original color */
+      letter-spacing: 5px; 
+      color: #222; 
     }
     100% {
       opacity: 1;
-      letter-spacing: 1px; /* Return to normal letter spacing */
-      color: #222; /* Final color */
+      letter-spacing: 1px; 
+      color: #222; 
     }
   }
   
-  /* Apply the animation to the store name */
+  
   .store-name h1 {
     font-size: 28px;
     font-weight: 600;
     color: #222;
     letter-spacing: 1px;
-    animation: storeNameAnimation 2s ease-out forwards; /* Run the animation once */
+    animation: storeNameAnimation 2s ease-out forwards; 
   }
   
   .header-icons {
