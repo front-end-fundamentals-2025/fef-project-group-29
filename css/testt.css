@@ -711,8 +711,10 @@ button:hover {
 
 .hover-boxes {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
   justify-content: center;
-  gap: 150px;
   margin-top: 20px;
   flex-wrap: wrap;
 }
@@ -751,9 +753,9 @@ button:hover {
 @media (min-width: 768px) {
 
     .hover-boxes {
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+      display: flex;
+      flex-direction: row;
+      gap: 150px;
     }
     
     .contact-section {
