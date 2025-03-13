@@ -868,9 +868,10 @@ button:hover {
     flex: 1; 
    
   }
-  
+  .store-name h1 {
+    font-size: 20px;
 }
-
+}
 
 @media (min-width: 768px) {
  .hover-boxes {
@@ -881,3 +882,80 @@ button:hover {
 
 
 }
+@media (max-width: 768px) { /*item detail*/
+    .product-detail-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 40px auto;
+    }
+  
+    .product-image img {
+      max-width: 100%;
+    }
+  
+    .product-info {
+      text-align: center;
+    }
+  
+    .product-info h2 {
+      font-size: 2rem;
+    }
+  
+    .product-info p {
+      font-size: 1rem;
+    }
+  
+    .product-info .price {
+      font-size: 1.5rem;
+    }
+    .add-to-cart {
+        width: 100%;
+        padding: 12px 20px;
+      }
+    }
+    @media (max-width: 768px) {
+        .cart-panel {
+          width: 300px;
+        }
+      
+        .cart-header h3 {
+          font-size: 1.2rem;
+        }
+      
+        .cart-item img {
+          width: 50px;
+          height: 50px;
+        }
+      
+        .cart-item .cart-details h4 {
+          font-size: 0.9rem;
+        }
+      
+        .cart-item .cart-details p {
+          font-size: 0.8rem;
+        }
+      
+        .remove-btn {
+          padding: 6px 10px;
+          font-size: 0.8rem;
+        }
+      
+        .quantity-controls button {
+          padding: 4px 8px;
+          font-size: 0.9rem;
+        }
+      
+        .order-total {
+          font-size: 1rem;
+        }
+      
+        .shipping-note {
+          font-size: 0.7rem;
+        }
+      
+        .checkout-btn {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+      }
